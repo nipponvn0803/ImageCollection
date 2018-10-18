@@ -17,7 +17,8 @@
     <div class="grid">
       <div class="grid-sizer"></div>
       <div class="grid-item" ng-repeat="contact in contacts">
-        <img src="{{ contact.link }}" style="width:50%;" />
+        <a style="cursor:pointer" 
+        ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}" /></a>
       </div>
     </div>
   

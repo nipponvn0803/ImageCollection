@@ -17,7 +17,7 @@
       <tbody>
         <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
           <td>
-            <a ng-href="#/contact/{{contact._id}}">{{ contact.link }}</a>
+            <a ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}" alt=""></a>
           </td>
         </tr>
       </tbody>

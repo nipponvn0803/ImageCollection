@@ -13,7 +13,11 @@
     <div class="col-md-1">
     </div>
 </div>
-   <input id="list-searchBox" type="text" ng-model="searchBox">
+  <form id="list-search-content">
+    <input id="list-searchBox" type="text"  name="input" class="list-input" ng-model="searchBox">
+    <button type="reset" class="list-search"></button>
+  </form>
+   
     <div class="grid">
       <div class="grid-sizer"></div>
       <div>
@@ -47,6 +51,15 @@
   };
 });
     
-
+function expand() {
+  $(".list-search").toggleClass("close");
+  $(".list-input").toggleClass("square");
+  if ($('.list-search').hasClass('close')) {
+    $('input').focus();
+  } else {
+    $('input').blur();
+  }
+}
+$('button').on('click', expand);
   </script>
 

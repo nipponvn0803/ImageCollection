@@ -6,32 +6,20 @@
   <div class="container">
     <div>
       <p>
-        <label>First Name (required)</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.firstName" required> 
+        <label>Link (required)</label> 
+        <input id="name" class="form-control" type="text" ng-model="contact.link" required> 
       </p>
       <p>
-        <label>Last Name (required)</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.lastName" required> 
+        <label>Tag 1</label> 
+        <input id="name" class="form-control" type="text" ng-model="contact.tag.tag1"> 
       </p>
       <p>
-        <label>Email (required)</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.email" required> 
+        <label>Tag 2</label> 
+        <input id="name" class="form-control" type="text" ng-model="contact.tag.tag2"> 
       </p>
       <p>
-        <label>Phone (Mobile)</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.phone.mobile"> 
-      </p>
-      <p>
-        <label>Phone (Work)</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.phone.work"> 
-      </p>
-      <p>
-        <label>Address</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.address"> 
-      </p>
-      <p>
-        <label>Twitter Handle</label> 
-        <input id="name" class="form-control" type="text" ng-model="contact.twitter"> 
+        <label>Tag 3</label> 
+        <input id="name" class="form-control" type="text" ng-model="contact.tag.tag3"> 
       </p>
       <p>
         <button style="margin-top:20px" class="btn btn-default" ng-click="saveContact(contact)">Save</button>

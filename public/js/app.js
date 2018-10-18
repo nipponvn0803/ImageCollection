@@ -28,7 +28,7 @@ angular.module("contactsApp", ['ngRoute'])
                 then(function(response) {
                     return response;
                 }, function(response) {
-                    alert("Error finding contacts.");
+                    alert("Error finding photos.");
                 });
         }
         this.createContact = function(contact) {
@@ -36,7 +36,7 @@ angular.module("contactsApp", ['ngRoute'])
                 then(function(response) {
                     return response;
                 }, function(response) {
-                    alert("Error creating contact.");
+                    alert("Error creating photo.");
                 });
         }
         this.getContact = function(contactId) {
@@ -45,7 +45,7 @@ angular.module("contactsApp", ['ngRoute'])
                 then(function(response) {
                     return response;
                 }, function(response) {
-                    alert("Error finding this contact.");
+                    alert("Error finding this photo.");
                 });
         }
         this.editContact = function(contact) {
@@ -55,7 +55,7 @@ angular.module("contactsApp", ['ngRoute'])
                 then(function(response) {
                     return response;
                 }, function(response) {
-                    alert("Error editing this contact.");
+                    alert("Error editing this photo.");
                     console.log(response);
                 });
         }
@@ -65,7 +65,7 @@ angular.module("contactsApp", ['ngRoute'])
                 then(function(response) {
                     return response;
                 }, function(response) {
-                    alert("Error deleting this contact.");
+                    alert("Error deleting this photo.");
                     console.log(response);
                 });
         }

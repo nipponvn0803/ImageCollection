@@ -13,13 +13,6 @@
     </div>
   </div>
   <div class="container">
-    <table class="table table-hover">
-      <tbody>
-        <tr ng-repeat="contact in contacts | orderBy:'lastName'" style="cursor:pointer">
-          <td>
-            <a ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}" alt=""></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+            <a ng-repeat="contact in contacts" style="cursor:pointer" 
+            ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}"></a>
   </div>

@@ -56,6 +56,10 @@ circle {
     text-align: center;
 }
 
+#list-searchBox{
+    margin: 200px;
+}
+
 body {
     min-height: 2000px;
     padding-top: 70px;

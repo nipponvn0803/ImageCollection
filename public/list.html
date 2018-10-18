@@ -1,3 +1,8 @@
+    <!-- Masonry script for images grid -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- Images loaded library -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
 <div class = "row">
     <div class="col-md-6">
       <h2>
@@ -12,7 +17,6 @@
     <div class="col-md-1">
     </div>
   </div>
-  <div class="container">
     <div class="grid-sizer"></div>
     <div class="grid">
       <div class="grid-item" ng-repeat="contact in contacts">
@@ -20,20 +24,19 @@
         ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}" style="width:50%;"></a>
       </div>
     </div>
-  </div>
   
   <script>
     // external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
-// init Masonry
-var $grid = $('.grid').masonry({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  columnWidth: '.grid-sizer'
-});
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});  
+    // init Masonry
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer'
+    });
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    });  
 
   </script>

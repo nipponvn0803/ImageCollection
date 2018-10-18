@@ -13,17 +13,21 @@
     <div class="col-md-1">
     </div>
 </div>
-<div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".tile"}'>
-    <!-- items -->
-    <div masonry-tile ng-repeat="contact in contacts">
-        <a style="cursor:pointer" 
-        ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}" /></a>
+   
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      <div ng-repeat="contact in contacts" on-finish-render>
+        <div class="grid-item">
+          <a style="cursor:pointer" 
+          ng-href="#/contact/{{contact._id}}"><img src="{{ contact.link }}" /></a>
+        </div>
     </div>
-  </div>
-    
+    </div>
   
   <script>
-    var myApp = angular.module('MyApp',['masonry']);
+    angular.module('myApp', [])
+    .directive('onFinishRender', function ($rootScope) {
+      return function(scope, element, attrs) {
     // external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
     // init Masonry
@@ -37,4 +41,12 @@
       $grid.masonry();
     });  
 
+    if (scope.$last){
+      window.alert("im the last!");
+    }
+  };
+});
+    
+
   </script>
+
